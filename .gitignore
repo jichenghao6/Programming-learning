@@ -1,220 +1,130 @@
-# Byte-compiled / optimized / DLL files
+# ============================================================
+# 多语言学习仓库通用 .gitignore
+# 作用：列出的文件/文件夹不会被 Git 上传到 GitHub
+# 以 # 开头的行是注释，不生效；不需要某个语言的规则可直接删掉
+# ============================================================
+
+
+# ---------- 操作系统自动生成的文件（所有系统通用，建议保留）----------
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+# macOS
+.DS_Store
+# Linux
+*~
+
+
+# ---------- 编辑器 / IDE 自动生成的配置 ----------
+# VS Code（若想保留你的编辑器设置，可删掉这行）
+.vscode/
+# Visual Studio
+.vs/
+# JetBrains 系列（CLion、PyCharm、IntelliJ IDEA 等）
+.idea/
+*.iml
+# 其他常见编辑器
+*.swp
+*.swo
+
+
+# ---------- Python ----------
 __pycache__/
-*.py[codz]
+*.py[cod]
 *$py.class
-
-# C extensions
 *.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-#   Usually these files are written by a python script from a template
-#   before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py.cover
-*.lcov
-.hypothesis/
-.pytest_cache/
-cover/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-.pybuilder/
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-#   For a library or package, you might want to ignore these files since the code is
-#   intended to run in multiple environments; otherwise, check them in:
-# .python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-# Pipfile.lock
-
-# uv
-#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-# uv.lock
-
-# poetry
-#   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-# poetry.lock
-# poetry.toml
-
-# pdm
-#   Similar to Pipfile.lock, it is generally recommended to include pdm.lock in version control.
-#   pdm recommends including project-wide configuration in pdm.toml, but excluding .pdm-python.
-#   https://pdm-project.org/en/latest/usage/project/#working-with-version-control
-# pdm.lock
-# pdm.toml
-.pdm-python
-.pdm-build/
-
-# pixi
-#   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
-# pixi.lock
-#   Pixi creates a virtual environment in the .pixi directory, just like venv module creates one
-#   in the .venv directory. It is recommended not to include this directory in version control.
-.pixi/*
-!.pixi/config.toml
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule*
-celerybeat.pid
-
-# Redis
-*.rdb
-*.aof
-*.pid
-
-# RabbitMQ
-mnesia/
-rabbitmq/
-rabbitmq-data/
-
-# ActiveMQ
-activemq-data/
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.envrc
-.venv
-env/
+# 虚拟环境
 venv/
+env/
+.venv/
 ENV/
-env.bak/
-venv.bak/
+# 打包/分发产物
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+# 环境变量与密钥（不要上传密码！）
+.env
+.env.local
 
-# Spyder project settings
-.spyderproject
-.spyproject
 
-# Rope project settings
-.ropeproject
+# ---------- C / C++ ----------
+# 编译生成的目标文件、可执行文件
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.exe
+*.out
+*.app
+# 调试文件
+*.pdb
+# 编译数据库/构建目录
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+# 注意：无扩展名的 C++ 编译产物（如 ./main）不会被上面规则匹配，
+#       可在对应项目文件夹里手动忽略，或养成把产物放进 build/ 的习惯。
 
-# mkdocs/Zensical documentation
-/site
 
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
+# ---------- Java ----------
+*.class
+*.jar
+*.war
+target/
+*.classpath
+*.project
+.settings/
 
-# Pyre type checker
-.pyre/
 
-# pytype static type analyzer
-.pytype/
+# ---------- JavaScript / TypeScript (Node.js) ----------
+node_modules/
+npm-debug.log*
+yarn-error.log*
+dist/
+.env
 
-# Cython debug symbols
-cython_debug/
 
-# PyCharm
-#   JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#   be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#   and can be added to the global gitignore or merged into this file.  For a more nuclear
-#   option (not recommended) you can uncomment the following to ignore the entire idea folder.
-# .idea/
+# ---------- Go ----------
+*.test
+*.out
+vendor/
 
-# Abstra
-#   Abstra is an AI-powered process automation framework.
-#   Ignore directories containing user credentials, local state, and settings.
-#   Learn more at https://abstra.io/docs
-.abstra/
 
-# Visual Studio Code
-#   Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore that
-#   can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#   and can be added to the global gitignore or merged into this file. However, if you prefer, you
-#   could uncomment the following to ignore the entire vscode folder
-# .vscode/
-# Temporary file for partial code execution
-tempCodeRunnerFile.py
+# ---------- Rust ----------
+target/
+Cargo.lock
 
-# Ruff stuff:
-.ruff_cache/
 
-# PyPI configuration file
-.pypirc
+# ---------- MATLAB ----------
+*.asv
+*.mex*
+slprj/
+octave-workspace
 
-# Marimo
-marimo/_static/
-marimo/_lsp/
-__marimo__/
 
-# Streamlit
-.streamlit/secrets.toml
+# ---------- LaTeX（笔记可能用到）----------
+# 编译产生的中间文件
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+# 想保留生成的 PDF 就不要加下面这行；通常 PDF 建议上传，故默认注释掉
+# *.pdf
+
+
+# ---------- 其他：大文件/压缩包/临时文件（按需开启）----------
+# *.zip
+# *.rar
+# *.7z
+# *.mp4
